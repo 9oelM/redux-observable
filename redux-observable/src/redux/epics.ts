@@ -7,7 +7,7 @@ import { Constants as C } from './constants';
 import { RootState, AllActions } from "./types";
 import * as A from "./actions";
 
-const startRequestTextEpic: Epic<AllActions, AllActions, RootState> = (action$, store$) =>
+export const startRequestTextEpic: Epic<AllActions, AllActions, RootState> = (action$, store$) =>
   action$.pipe(
     ofType(C.START_REQUEST_TEXT),
     switchMap(() => {
